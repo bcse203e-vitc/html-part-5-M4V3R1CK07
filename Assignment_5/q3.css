@@ -1,0 +1,49 @@
+/* General Styles */
+body {
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: whitesmoke;
+   }
+   .header {
+    text-align: center;
+   }
+   h2 {
+    font-weight: bold;
+   }
+   /* Main Layout */
+   .main-content {
+    display: flex;
+    justify-content: center;  /* Center horizontally */
+    align-items: center;      /* Center vertically */
+    flex-wrap: wrap; /* Allows wrapping for responsiveness */
+    gap: 10px; /* Adds space between columns */
+    padding: 10px;
+}
+.div1, .div2, .div3 {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    
+}
+.img1, .img2, .img3, .img4, .img5, .img6 {
+    width: 250px;
+    height: 250px;
+    flex: 1;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px lightgrey;
+}
+.img1:hover, .img2:hover, .img3:hover, .img4:hover, .img5:hover, .img6:hover {
+    transform: scale(1.05);
+}
+/* Responsive Design */
+   @media (max-width: 768px) {
+    .main-content {
+    flex-direction: column; /* Stacks the columns vertically */
+    }
+   }
