@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: #333;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 10px 20px;
+  justify-content: center;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  margin: 0 15px;
+  padding: 10px;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+/* Hover effect */
+.nav-link:hover {
+  color: #3498db;
+}
+
+/* Active link styling using :target */
+.section:target ~ .navbar .nav-link[href="#section1"],
+.section:target ~ .navbar .nav-link[href="#section2"],
+.section:target ~ .navbar .nav-link[href="#section3"],
+.section:target ~ .navbar .nav-link[href="#section4"] {
+  color: #3498db;
+  border-bottom: 2px solid #3498db;
+}
+
+/* Section Styling */
+.section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}
+
+#section1 {
+  background-color: #3498db;
+}
+
+#section2 {
+  background-color: #e74c3c;
+}
+
+#section3 {
+  background-color: #2ecc71;
+}
+
+#section4 {
+  background-color: #9b59b6;
+}
