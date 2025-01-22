@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f7f7f7;
+}
+
+.box {
+  width: 20vw;
+  height: 20vh;
+  padding: 5%;
+  margin: 10%;
+  border: 2px solid #3498db;
+  background-color: #fff;
+  text-align: center;
+  transition: border 0.3s ease;
+}
+
+.box:hover {
+  border: 5px solid #e74c3c;
+}
