@@ -1,49 +1,56 @@
-/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    justify-content: center;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: whitesmoke;
-   }
-   .header {
-    text-align: center;
-   }
-   h2 {
-    font-weight: bold;
-   }
-   /* Main Layout */
-   .main-content {
-    display: flex;
-    justify-content: center;  /* Center horizontally */
-    align-items: center;      /* Center vertically */
-    flex-wrap: wrap; /* Allows wrapping for responsiveness */
-    gap: 10px; /* Adds space between columns */
-    padding: 10px;
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
-.div1, .div2, .div3 {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 80%;
+  max-width: 1200px;
 }
-.img1, .img2, .img3, .img4, .img5, .img6 {
-    width: 250px;
-    height: 250px;
-    flex: 1;
-    background-color: #f2f2f2;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 2px 2px 2px lightgrey;
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
 }
-.img1:hover, .img2:hover, .img3:hover, .img4:hover, .img5:hover, .img6:hover {
-    transform: scale(1.05);
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
-/* Responsive Design */
-   @media (max-width: 768px) {
-    .main-content {
-    flex-direction: column; /* Stacks the columns vertically */
-    }
-   }
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+  filter: brightness(80%);
+}
+
+.caption {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  font-size: 1.2rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .caption {
+  opacity: 1; /* Show the caption on hover */
+}
