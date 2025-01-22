@@ -1,0 +1,82 @@
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.animated-header {
+  text-align: center;
+}
+
+.animated-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0;
+  animation: colorAnimation 3s infinite, sizeAnimation 3s infinite;
+}
+
+/* Keyframe for color animation */
+@keyframes colorAnimation {
+  0% {
+    color: #3498db;
+  }
+  50% {
+    color: #e74c3c;
+  }
+  100% {
+    color: #3498db;
+  }
+}
+
+/* Keyframe for size animation */
+@keyframes sizeAnimation {
+  0% {
+    font-size: 2.8rem;
+  }
+  50% {
+    font-size: 3.2rem;
+  }
+  100% {
+    font-size: 2.8rem;
+  }
+}
+
+.navigation {
+  margin-top: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin: 0 15px;
+  color: #333;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #3498db;
+}
+
+/* Smooth underline effect on hover */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #3498db;
+  bottom: -5px;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
